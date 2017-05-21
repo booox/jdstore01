@@ -2,7 +2,7 @@ class Admin::ProductsController < ApplicationController
   before_action :find_product, only: [:edit, :update]
 
   layout "admin"
-  
+
   before_action :authenticate_user!
   before_action :admin_required
 
@@ -43,6 +43,6 @@ class Admin::ProductsController < ApplicationController
   end
 
   def product_params
-    params.require(:product).permit(:title, :description, :quantity, :price)
+    params.require(:product).permit(:title, :description, :quantity, :price, :image)
   end
 end
