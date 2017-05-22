@@ -30,7 +30,7 @@ class Admin::ProductsController < ApplicationController
 
   def update
     if @product.update(product_params)
-      redirect_to admin_product_path, notice: "Product Update"
+      redirect_to admin_products_path, notice: "Product Update"
     else
       render :edit
     end
